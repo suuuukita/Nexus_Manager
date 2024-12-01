@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusManager | Site Oficial</title>
+
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="nexus-contate.css">
+</head>
+
+<body>
+
+       <!-- Acessibilidade -->
+       <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+     
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo NexusBank" class="logo-image">
+            <h1 class="logotipo">NexusManager</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção do subtítulo com fundo estilizado -->
+        <section class="intro-section">
+            <h2>Conecte-se com o Nexus</h2>
+            <p>Estamos sempre prontos para atender você em diferentes plataformas. Escolha abaixo como deseja entrar em contato.</p>
+        </section>
+
+        <!-- Seção dos cards de contato -->
+        <section class="contact-section">
+            <div class="cards-container">
+                <!-- Card do LinkedIn -->
+                <div class="contact-card" id="linkedin-card">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Conecte-se conosco no LinkedIn para acompanhar novidades e artigos.</p>
+                    <button class="btn" onclick="openLink('https://www.linkedin.com/in/nexus-manager-5b71a733a/')">Visitar LinkedIn</button>
+                </div>
+
+                <!-- Card do Instagram -->
+                <div class="contact-card" id="instagram-card">
+                    <i class="fab fa-instagram fa-3x"></i>
+                    <h3>Instagram</h3>
+                    <p>Siga nosso Instagram para dicas e inspirações financeiras.</p>
+                    <button class="btn" onclick="openLink('https://www.instagram.com/seunexusmanager/com')">Visitar Instagram</button>
+                </div>
+
+                <!-- Card do E-mail -->
+                <div class="contact-card" id="email-card">
+                    <i class="fas fa-envelope fa-3x"></i>
+                    <h3>Email</h3>
+                    <p>Envie-nos um email para suporte ou dúvidas gerais.</p>
+                    <button class="btn" onclick="openLink('mailto:seunexusmanager@gmail.com')">Enviar Email</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NexusBank. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para abrir os links dos botões
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.logotipo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 30px;
+}
+
+
+.header-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header-icons img {
+    height: 30px;
+}
+
+/* Saldo e Gráfico */
+.saldo-status {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.saldo-status h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.saldo-status span {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* Saldo e Gráfico */
+.grafico-container {
+    margin: 20px auto;
+    width: 60%;
+    max-width: 400px; 
+    text-align: center;
+}
+
+canvas {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Seção Botão Sua Poupança */
+.porquinhos h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px; /* Reduzido o espaçamento abaixo do título */
+}
+
+.botao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; /* Aproxima o botão do título */
+    margin-bottom: 50px; /* Espaço agradável abaixo do botão antes do footer */
+}
+
+.botao-poupanca {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-poupanca:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+
+/* Ajuste para manter tudo centralizado */
+.saldo-status,
+.porquinhos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; /* Centraliza a seção */
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px 40px;
+    width: 100%;
+    margin-top: auto; /* Garante que o footer fique no final */
+    position: relative;
+    margin-bottom: 20px; /* Espaço extra abaixo do footer */
+}
+
+footer > p {
+margin-left: 45rem;
+}
+
+
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-icons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-icons img {
+        height: 25px;
+    }
+
+    /* Saldo e Gráfico */
+    .saldo-status {
+        margin-top: 10px;
+        width: 90%;
+    }
+
+    .grafico-container {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    /* Botão Sua Poupança */
+    .porquinhos h2 {
+        font-size: 1.5rem;
+    }
+
+    .botao-poupanca {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Ajuste adicional para telas muito pequenas (celulares menores) */
+@media (max-width: 480px) {
+    /* Header */
+    .logo-container img {
+        height: 80px;
+    }
+
+    .logotipo {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        font-size: 0.9rem;
+    }
+
+    /* Saldo e Gráfico */
+    .saldo-status h1 {
+        font-size: 1.5rem;
+    }
+
+    .grafico-container {
+        max-width: 250px;
+    }
+
+    /* Botão Sua Poupança */
+    .botao-poupanca {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+

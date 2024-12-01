@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - NexusManager</title>
+
+    <!-- Link para Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="sobre-nos.css">
+
+</head>
+
+<body>
+
+       <!-- Acessibilidade -->
+       <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+     
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo NexusBank" class="logo">
+            <h1 class="logotipo">NexusManager</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="text-content">
+                <h2>Sobre Nós:</h2>
+                <p>Bem-vindo ao NexusManager, onde sua saúde financeira é nossa prioridade. Somos mais do que um banco
+                    tradicional; somos seu parceiro na jornada para alcançar estabilidade e prosperidade financeira.</p>
+
+                <h2>Nossa Missão:</h2>
+                <p>Nossa missão é empoderar nossos clientes com as ferramentas e conhecimentos necessários para
+                    gerenciar suas finanças de maneira eficaz e alcançar seus objetivos financeiros. Acreditamos que a
+                    educação financeira é a chave para um futuro seguro e próspero.</p>
+            </div>
+            <div class="image-content carousel">
+                <button class="carousel-btn prev-btn">&#9664;</button>
+                <div class="carousel-images">
+                    <img src="img/mulher 2 trabalhando.avif" alt="Profissional no ambiente de trabalho"
+                        class="carousel-image">
+                    <img src="img/bloco 3.webp" alt="Equipe de trabalho colaborando" class="carousel-image">
+                    <img src="img/img mao globo.avif" alt="Análise financeira em progresso" class="carousel-image">
+                </div>
+                <button class="carousel-btn next-btn">&#9654;</button>
+            </div>
+        </section>
+
+         <!-- Seção dos Fundadores -->
+         <section class="founders-section">
+            <h2>Nossos Fundadores</h2>
+            <div class="founders-container">
+                <!-- Bloco de cada fundador -->
+                <div class="founder-card">
+                    <img src="img/luiza-picrew.png" alt="Foto de Luiza Souza de Ramalho" class="founder-image">
+                    <h3>Luiza Souza de Ramalho</h3>
+                    <ul>
+                        <li><strong>Função:</strong> CEO</li>
+                        <li><strong>Idade:</strong> 18</li>
+                        <li><strong>Trabalhos: </strong> Design, Construção, Projeto</li>
+                    </ul>
+                </div>
+
+                <div class="founder-card">
+                    <img src="img/nalu-picrew.png" alt="Foto de Ana Luisa Lucena de Oliveira" class="founder-image">
+                    <h3>Ana Luiza Lucena de Oliveira</h3>
+                    <ul>
+                        <li><strong>Função:</strong> CFO</li>
+                        <li><strong>Idade:</strong> 17</li>
+                        <li><strong>Trabalhos:</strong> Design, Escrita, Suporte</li>
+                    </ul>
+                </div>
+
+                <div class="founder-card">
+                    <img src="img/skta-picrew.png" alt="Foto de Samuel de Oliveira Andrade" class="founder-image">
+                    <h3>Samuel de Oliveira Andrade</h3>
+                    <ul>
+                        <li><strong>Função:</strong> CTO</li>
+                        <li><strong>Idade: </strong> 18</li>
+                        <li><strong>Trabalhos: </strong> Design, Construção, Suporte</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+<!-- Carrossel com Botão -->
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+    
+        let currentImageIndex = 0;
+    
+        function updateCarousel() {
+            const imageWidth = document.querySelector('.carousel-image').offsetWidth;
+            carouselImages.style.transform = `translateX(-${currentImageIndex * imageWidth}px)`;
+        }
+    
+        prevBtn.addEventListener('click', () => {
+            const totalImages = document.querySelectorAll('.carousel-image').length;
+            currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages; // Volta para o último ao passar do início
+            updateCarousel();
+        });
+    
+        nextBtn.addEventListener('click', () => {
+            const totalImages = document.querySelectorAll('.carousel-image').length;
+            currentImageIndex = (currentImageIndex + 1) % totalImages; // Vai para o primeiro ao passar do final
+            updateCarousel();
+        });
+    
+        window.addEventListener('resize', updateCarousel); // Atualiza ao redimensionar a janela
+    </script>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NexusManager. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

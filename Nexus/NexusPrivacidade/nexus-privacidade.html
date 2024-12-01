@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos do Site</title>
+  <link rel="stylesheet" href="nexus-privacidade.css">
+  <link rel="icon" href="img/Nexus__Nova_Logo_sem_Tipografia.png" type="image/png">
+</head>
+<body>
+
+    <!-- Acessibilidade -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+   
+<header>
+    <table>Termos de Privacidade | Nexus Manager</table>
+</header>
+
+<div class="content">
+  <h1>Termos e Condições de Uso</h1>
+  <p>
+    Abaixo estão os termos e condições detalhados sobre como o Nexus Manager coleta, trata e protege suas informações. 
+    Por favor, leia atentamente.
+  </p>
+  
+  <h2>1. Sobre as informações coletadas e tratadas pelo Nexus</h2>
+  <p>
+    O Nexus coleta e trata dados pessoais para oferecer funcionalidades como gerenciamento financeiro, análises de desempenho, 
+    criação de metas financeiras e acesso a produtos e serviços personalizados. Entre os dados tratados, podemos incluir 
+    informações pessoais (nome, CPF, endereço), dados financeiros (extratos bancários, transações) e dados sensíveis (biometria), 
+    sempre com o objetivo de proporcionar segurança, prevenir fraudes e melhorar sua experiência. Além disso, cumprimos 
+    integralmente a legislação aplicável, como a LGPD, para garantir que seus dados sejam tratados de forma ética e segura.
+  </p>
+
+  <h2>2. Uso de Cookies</h2>
+  <p>
+    Utilizamos Cookies em nosso site e aplicativo para melhorar sua experiência. Esses arquivos ajudam a lembrar suas preferências, 
+    fornecer sugestões personalizadas e otimizar o desempenho de nossos serviços. Você pode gerenciar suas preferências de Cookies 
+    a qualquer momento, acessando nossa Política de Cookies.
+  </p>
+
+  <h2>3. Duração do tratamento dos dados pessoais</h2>
+  <p>
+    Os dados pessoais fornecidos ao Nexus são tratados pelo período necessário para atender às finalidades para as quais foram 
+    coletados, conforme os serviços contratados ou conforme exigido por leis e regulamentações aplicáveis.
+  </p>
+
+  <h2>4. Seus direitos como titular dos dados</h2>
+  <p>
+    Nos termos da LGPD, você tem diversos direitos em relação aos seus dados pessoais, como:
+  </p>
+  <ul>
+    <li>Confirmação da existência de tratamento;</li>
+    <li>Acesso aos dados pessoais;</li>
+    <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+    <li>Anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade com a lei;</li>
+    <li>Portabilidade de dados;</li>
+    <li>Informação sobre compartilhamento de dados;</li>
+    <li>Revogação de consentimento e oposição ao tratamento.</li>
+  </ul>
+  <p>
+    Para exercer seus direitos, basta entrar em contato pelos nossos canais oficiais de atendimento.
+  </p>
+
+  <h2>5. Compartilhamento de dados pessoais</h2>
+  <p>
+    O Nexus Manager compartilha dados apenas quando necessário para:
+  </p>
+  <ul>
+    <li>Execução de serviços contratados;</li>
+    <li>Cumprimento de obrigações legais ou regulatórias;</li>
+    <li>Proteção de direitos em processos judiciais ou administrativos.</li>
+  </ul>
+  <p>
+    O compartilhamento é realizado de forma segura e sempre em conformidade com as normas de proteção de dados.
+  </p>
+
+  <h2>6. Canais de atendimento para privacidade</h2>
+  <p>
+    Se você deseja saber mais ou exercer seus direitos, disponibilizamos os seguintes canais de atendimento:
+  </p>
+  <ul>
+    <li>E-mail: <a href="mailto:seunexusmanager@gmail.com">privacidade@nexusmanager.com</a></li>
+    <li>Portal de Privacidade, acessível diretamente em nosso aplicativo ou site.</li>
+  </ul>
+
+  <h2>7. Nosso compromisso com a privacidade</h2>
+  <p>
+    O Nexus Manager é certificado em privacidade por entidades reconhecidas globalmente, assegurando conformidade com a LGPD e normas 
+    internacionais como a GDPR. Nosso compromisso é manter seus dados seguros e oferecer transparência em todas as etapas do 
+    tratamento de informações.
+  </p>
+  <p>
+    Para informações mais detalhadas, consulte nossa Política de Privacidade completa disponível em nosso site.
+  </p>
+
+  <button class="btn" id="accept-btn">Aceitar</button>
+  <button class="btn btn-secondary" id="decline-btn">Recusar</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+  <h2>Aviso</h2>
+  <p>Você precisa aceitar os termos para continuar usando nosso site.</p>
+  <button class="btn" id="close-popup">Fechar</button>
+</div>
+
+<footer>
+  © 2024 Nexus Manager. Todos os direitos reservados.
+</footer>
+
+<script>
+  // JavaScript para interatividade
+  const acceptBtn = document.getElementById('accept-btn');
+  const declineBtn = document.getElementById('decline-btn');
+  const popup = document.getElementById('popup');
+  const overlay = document.getElementById('overlay');
+  const closePopup = document.getElementById('close-popup');
+
+  acceptBtn.addEventListener('click', () => {
+    alert('Obrigado por aceitar os termos!');
+  });
+
+  declineBtn.addEventListener('click', () => {
+    overlay.style.display = 'block';
+    popup.style.display = 'block';
+  });
+
+  closePopup.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    popup.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

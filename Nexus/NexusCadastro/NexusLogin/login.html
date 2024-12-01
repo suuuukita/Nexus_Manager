@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Formulário de Login</title>
+</head>
+<body>
+
+       <!-- Acessibilidade -->
+       <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+     
+
+    <div class="form-container">
+        <div class="logo">
+
+            <img src="img/logo.png" alt="Logo do Site">
+
+        </div>
+        <h2>Nexus Manager</h2>
+        <form id="formLogin">
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            <input type="submit" value="Entrar">
+        </form>
+
+        <div class="additional-options">
+            <button class="register-btn">Não tem conta ainda? <span>Clique e cadastre-se</span> <a href="NexusCadastro/cadastro.html"></a></button>
+            <button class="about-btn">SOBRE NÓS <a href="NexusSobrenós/sobrenos.html"></a></button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

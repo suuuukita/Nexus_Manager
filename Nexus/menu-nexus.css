@@ -1,0 +1,408 @@
+/* Estilos globais */
+body {
+    background-color: #202020;
+    color: white;
+    font-family: 'Abyssinica SIL', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 130px;
+    margin-right: 10px;
+}
+
+.logotipo {
+    font-family: 'Antic Didone', serif;
+    font-size: 40px;
+    font-weight: 90;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Abyssinica SIL, sans-serif;
+}
+
+.header-icons {
+    display: flex;
+    gap: -15px;
+}
+
+.config-button img,
+.login-icon img {
+    width: 50px; /* Mesma largura */
+    height: 50px; /* Mesma altura */
+    object-fit: contain; /* Garante proporção correta */
+    border-radius: 50%; /* Opcional: faz os ícones ficarem redondos */
+}
+
+.config-button,
+.login-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* Carousel */
+
+.carousel {
+    width: 100%; /* Adapta-se à largura da página */
+    height: auto; /* Permite que a altura se ajuste dinamicamente */
+    overflow: hidden; /* Garante que nenhuma parte extra das imagens seja exibida */
+    margin: 20px 0;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave para o movimento do carrossel */
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Garante que as imagens não distorçam */
+    flex-shrink: 0;
+}
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+hr {
+    border: 1px solid white;
+    margin: 20px 0;
+}
+
+/* Colaboradores */
+.colaboradores h2 {
+    font-family: 'Arbutus Slab', serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 159px);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 159px;
+    height: 177px;
+    background-color: #d9d9d9;
+    border-radius: 25px 25px 25px 25px;
+    opacity: 100%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.card:hover {
+    background-color: #667781;
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+/* Finanças */
+.financas {
+    padding: 20px;
+    text-align: left;
+    padding: 15vh; /* vh é utilizado para usar a (viewpoet height)*/
+}
+
+.div-paragrafo p {
+    font-size: 3em;
+    font-family: serif;
+}
+
+.div-paragrafo span {
+    color: yellow;
+    font-weight: 700;
+}
+
+.div-pai {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.div-pai div {
+    width: 15rem;
+    height: 15rem;
+}
+
+/* caixa01 */
+.caixa01 {
+    background-image: url(img/caixa01.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: end; */
+}
+
+.caixa01 p {
+    background-color: #333333b6;
+    padding: 1.5rem;
+    margin-top: 6rem;
+}
+/* caixa01 */
+
+/* caixa02 */
+.caixa02 {
+    background-image: url(img/caixa02.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: end; */
+}
+
+.caixa02 p {
+    background-color: #333333b6;
+    padding: 1.5rem;
+    margin-top: 6rem;
+}
+/* caixa02 */
+
+/* caixa03 */
+.caixa03 {
+    background-image: url(img/caixa03.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: end; */
+}
+
+.caixa03 p {
+    background-color: #333333b6;
+    padding: 1.5rem;
+    margin-top: 6rem;
+}
+/* caixa03 */
+
+
+.financas h3 {
+    font-family: 'Antic Didone', serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ABABAB;
+    color: black;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Abyssinica SIL', sans-serif;
+    margin-right: 15px;
+}
+
+.social-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+
+
+.next-btn {
+    right: -10px;
+}
+
+.carousel-btn:hover {
+    background-color: #666;
+}
+
+.social-button i {
+    font-size: 40px;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        height: 80px; /* Reduz o tamanho do logo */
+    }
+
+    .logotipo {
+        font-size: 1.5rem; /* Ajusta o tamanho do texto */
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Diminui a fonte do menu */
+    }
+
+    .header-icons {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .config-button img,
+    .login-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: auto; /* Permite que a altura se ajuste */
+    }
+
+    .carousel-images img {
+        object-fit: cover;
+        height: auto; /* Ajusta imagens do carrossel */
+    }
+
+    .colaboradores .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        width: auto;
+        height: auto;
+    }
+
+    .div-paragrafo p {
+        font-size: 1.5em; /* Reduz o texto das finanças */
+        text-align: center;
+    }
+
+    .div-pai {
+        flex-direction: column;
+        gap: 20px; /* Adiciona espaço entre as caixas */
+    }
+
+    .div-pai div {
+        width: 100%;
+        max-width: 300px; /* Ajusta o tamanho das caixas */
+        margin: 0 auto;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 10px;
+    }
+
+    footer a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .social-button i {
+        font-size: 30px; /* Ajusta o tamanho dos ícones sociais */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .carousel-images img {
+        width: 100%;
+    }
+
+    .div-paragrafo p {
+        font-size: 1.2em;
+    }
+
+    .div-pai div {
+        width: 90%;
+    }
+
+    .div-pai div p {
+        font-size: 0.9rem;
+    }
+}
+
